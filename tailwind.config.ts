@@ -1,20 +1,21 @@
-import type { Config } from 'tailwindcss'
+import { type Config } from "tailwindcss"
 
-const config: Config = {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+export default {
+  content: ["*"],
   theme: {
     extend: {
+      fontFamily: {
+        flexa: "var(--font-gt-flexa)",
+      },
+      colors: {
+        primary: "#34E2A3",
+        secondary: "#F9BE00",
+        tertiary: "#004AAD",
+      },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        "bg-search": "url('/images/search/bg-search.jpg')",
       },
     },
   },
   plugins: [],
-}
-export default config
+} satisfies Config

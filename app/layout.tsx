@@ -4,8 +4,8 @@ import theme from "../styles/antd-theme-config"
 import GlobalStyles from "@/styles/GlobalStyles"
 
 export const metadata: Metadata = {
-  title: "Luminary School Demo",
-  description: "A school management web application",
+  title: "Luminary School",
+  description: "It's a school management web application",
 }
 
 export default function RootLayout({
@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <ConfigProvider theme={theme}>
         <GlobalStyles />
-        <body>{children}</body>
+        <body suppressHydrationWarning={true}>{children}</body>
       </ConfigProvider>
     </html>
   )

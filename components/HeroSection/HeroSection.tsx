@@ -17,11 +17,15 @@ const HeroSection = () => {
     <Carousel autoplay draggable={true} tw="px-32 my-5">
       {images.map((imageUrl, index) => (
         <div key={index} tw="w-full max-h-[75vh] overflow-hidden relative">
-          <img
+          <Image
             src={imageUrl}
             alt={`Image ${index + 1}`}
+            sizes="100vw"
+            height={0}
+            width={0}
             tw="w-full h-full"
-          ></img>
+            priority
+          ></Image>
           <div tw="absolute inset-0 bg-black opacity-60"></div>
           <div tw="absolute w-full h-full flex items-center justify-center top-0 left-0">
             <div>

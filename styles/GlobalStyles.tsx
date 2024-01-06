@@ -8,10 +8,9 @@ const CustomStyles = createGlobalStyle`
 
 @font-face {
   font-family: 'Nunito';
-  src: url('/fonts/gt-flexa/regular.woff2') format('woff2'),
-       url('/fonts/gt-flexa/regular.woff') format('woff');
-  font-weight: 400;
   font-style: normal;
+  font-weight: 300;
+  src:url('/fonts/gt-flexa/regular.woff') format('woff');
 }
 :root{
   --font-gt-flexa: 'Nunito',sans-serif;;
@@ -25,6 +24,10 @@ h1{
 h3{
   ${tw`font-flexa`}
 }
+p{
+  ${tw`font-flexa`}
+}
+
 
 `
 
